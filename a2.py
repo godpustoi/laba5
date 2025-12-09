@@ -1,8 +1,11 @@
-text = input("Введите текст:")
-words = text.split()
-output = [word[0] for word in words]
+import re
+
+text = input("Введите текст: ")
+text = re.split(r'(?<=[.?!]) ', text)
+count = len(text)
 start = 0
-length = len(output)
-while start != length:
-    print(output[start])
+while start != count:
+    print(text[start])
     start = start + 1
+
+
